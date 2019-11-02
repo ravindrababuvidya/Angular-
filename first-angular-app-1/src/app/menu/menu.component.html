@@ -1,0 +1,16 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="navbar-brand">
+            <a href="https://github.com/ravindrababuvidya" class="nav-link" >Github Ravindra Babu </a>
+        </div>
+        <ul class="navbar-nav">
+            <li>  <a *ngIf="this.haServices.isLoginedUser()" routerLink="/welcome/ravindra" class="nav-link" >Home</a></li>
+            <li><a *ngIf="this.haServices.isLoginedUser()" routerLink="/todos" class="nav-link" >Todo's</a></li>
+            
+        </ul>
+        <ul class="navbar-nav navbar-collapse justify-content-end" >
+                <li> <a *ngIf="!this.haServices.isLoginedUser()" routerLink="/login" class="nav-link" >Login</a></li>
+                <li> <a *ngIf="this.haServices.isLoginedUser()" routerLink="/logout" class="nav-link" >LogOut</a></li>
+        </ul>
+    </nav>
+</header>
